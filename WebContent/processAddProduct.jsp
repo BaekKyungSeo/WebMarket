@@ -43,9 +43,9 @@
 	
 	PreparedStatement pstmt = null;	
 	
-	String sql = "insert into product values(?,?,?,?,?,?,?,?,?)";
-	pstmt = conn.prepareStatement(sql);
-	pstmt.setString(1, productId);
+	String sql = "insert into product values(?,?,?,?,?,?,?,?,?)";	//product테이블의 새로운 필드 값을 삽입하는 insert문
+	pstmt = conn.prepareStatement(sql);		//PreparedStatement 객체를 생성하도록 prepareStatement() 메소드 
+	pstmt.setString(1, productId);	//폼 페이지에서 전송된 데이터를 14행 물음표에 설정하도록 setString() 메소드
 	pstmt.setString(2, name);
 	pstmt.setInt(3, price);
 	pstmt.setString(4, description);
@@ -54,7 +54,7 @@
 	pstmt.setLong(7, stock);
 	pstmt.setString(8, condition);
 	pstmt.setString(9, fileName);
-	pstmt.executeUpdate();
+	pstmt.executeUpdate();		//INSERT 문을 실행하도록 PreparedStatement 객체의 executeUpdate() 메소드
 	
 	if (pstmt != null)
 		pstmt.close();

@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 
 public class DBConnection {
 	
-	public static Connection getConnection()throws Exception, ClassNotFoundException  {		
+	public static Connection getConnection() throws Exception, ClassNotFoundException  {		
 
 		Connection conn = null;		
 	
